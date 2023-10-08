@@ -1,0 +1,114 @@
+/***** Main *****/
+:root{
+    --app-color: #19AD9F;
+    --app-hover-color: #1fa699;
+    --app-focus-color: #249e92;
+}
+/***** End Main *****/
+/***** Form *****/
+
+.form-control:focus{
+    border-color: #C2D0DD;
+}
+
+/***** End Form *****/
+/***** Buttons *****/
+.btn-primary{
+    background-color: var(--app-color);
+    border-color: var(--app-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--app-hover-color);
+    border-color: var(--app-hover-color);
+}
+
+.btn-link {
+    color: var(--app-color);
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    background-color: var(--app-focus-color);
+    border-color: var(--app-focus-color);
+    -webkit-box-shadow: 0 0 0 0.1rem rgba(25,173,159,.5);
+    box-shadow: 0 0 0 0.1rem rgba(25,173,159,.5);
+}
+
+.bg-soft-primary {
+    background-color: rgba(25,173,159,.08)!important;
+    color: var(--app-color)!important;
+}
+
+.bg-soft-primary:hover {
+    background-color: var(--app-color)!important;
+}
+
+.btn-soft-dark:hover svg path{
+    fill: #fff;
+}
+
+.btn-icon-circle.btn-icon-circle-xs {
+    width: 22px;
+    height: 22px;
+    line-height: 1;
+    padding: 0;
+    font-size: 12px;
+}
+
+.file-box-content .file-box .download-icon-link:hover {
+    color: var(--app-color);
+}
+/***** End Buttons *****/
+/***** Sidebar *****/
+
+.left-sidebar .brand .logo {
+    line-height: 90px;
+}
+
+.left-sidebar .brand .logo .logo-lg{
+    height: 60px;
+}
+
+/***** End Sidebar *****/
+/***** File upload (uppy) *****/
+
+.uppy-size--md .uppy-Dashboard-AddFiles-title {
+    font-size: 16px;
+}
+
+.uppy-size--xl .uppy-Dashboard-Item-preview {
+    height: 90px;
+}
+
+.uppy-Dashboard-files > div[role="presentation"]{
+    height: 150px !important;
+}
+
+.uppy-size--xl .uppy-Dashboard-Item {
+    height: 150px;
+}
+
+.uppy-Dashboard-browse {
+    color: var(--app-color);
+}
+/***** End File upload (uppy) *****/
+/***** DataTable *****/
+.dataTable-table>tbody>tr>td{
+    vertical-align: middle;
+}
+
+.dataTable-sorter::before, .dataTable-sorter::after {
+    right: -16px;
+}
+
+.table-message{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+
+.dataTable-table th a {
+    white-space: nowrap;
+}
+/***** End DataTable *****/
