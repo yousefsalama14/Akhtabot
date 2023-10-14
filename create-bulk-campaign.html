@@ -13,6 +13,7 @@
 
     <link href="assets/plugins/datatables/datatable.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/datepicker/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/select/selectr.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/uppy/uppy.min.css" rel="stylesheet" type="text/css" />
 
     <!-- App css -->
@@ -48,6 +49,12 @@
                             </a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
+                            <a class="nav-link" href="campaigns-requests.html">
+                                <i class="ti ti-file-check menu-icon"></i>
+                                <span>Requests</span>
+                            </a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
                             <a class="nav-link" href="#campaigns" data-bs-toggle="collapse" role="button"
                                 aria-expanded="true" aria-controls="campaigns">
                                 <i class="ti ti-speakerphone menu-icon"></i>
@@ -55,9 +62,6 @@
                             </a>
                             <div class="collapse show" id="campaigns">
                                 <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="campaigns-requests.html">Requests</a>
-                                    </li><!--end nav-item-->
                                     <li class="nav-item menuitem-active">
                                         <a class="nav-link active" href="create-bulk-campaign.html">Create Bulk
                                             Campaign</a>
@@ -249,12 +253,12 @@
                                                 id="SendingDuration">
                                         </div>
                                         <div class="col-12 col-md-6 mb-4">
-                                            <label for="ExcelSheet" class="form-label">Excel sheet with phone
+                                            <label class="form-label">Excel sheet with phone
                                                 number</label>
-                                            <input class="form-control" type="file" id="ExcelSheet">
+                                            <input class="form-control" type="file" id="ExcelSheet" multiple>
                                         </div>
                                         <div class="col-12 col-md-6 mb-4">
-                                            <label for="message" class="form-label">Message</label>
+                                            <label for="message" class="form-label">Message  (Optional)</label>
                                             <textarea class="form-control" rows="5" id="message"
                                                 placeholder="Enter your message"
                                                 style="height: calc(100% - 27px);"></textarea>
@@ -268,9 +272,12 @@
                                         <div class="col-12 mb-4">
                                             <label for="TestMessage" class="form-label">Test message
                                                 (Optional)</label>
-                                            <div class="input-group">
-                                                <input type="number" class="form-control" placeholder="+20 123 456 7890"
-                                                    aria-label="Send Test Message" aria-describedby="TestMessage">
+                                            <div class="input-group flex-nowrap">
+                                                <div class="tags-input">
+                                                    <ul id="PhoneNumberTags"></ul>
+                                                    <input type="text" id="PhoneNumberTagInput" class="form-control"
+                                                        placeholder="Add Mobile number" />
+                                                </div>
                                                 <button class="btn btn-primary" type="button"
                                                     id="TestMessage">Send</button>
                                             </div>
@@ -305,9 +312,8 @@
     <!-- end page-wrapper -->
 
     <!-- Javascript  -->
-    <!-- <script src="assets/plugins/datatables/simple-datatables.js"></script> -->
-    <!-- <script src="assets/plugins/datepicker/datepicker-full.min.js"></script> -->
     <script src="assets/plugins/uppy/uppy.min.js"></script>
+    <script src="assets/plugins/select/selectr.min.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>

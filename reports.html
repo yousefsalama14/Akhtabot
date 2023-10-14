@@ -46,6 +46,12 @@
                             </a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
+                            <a class="nav-link" href="campaigns-requests.html">
+                                <i class="ti ti-file-check menu-icon"></i>
+                                <span>Requests</span>
+                            </a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
                             <a class="nav-link" href="#campaigns" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="campaigns">
                                 <i class="ti ti-speakerphone menu-icon"></i>
@@ -53,9 +59,6 @@
                             </a>
                             <div class="collapse" id="campaigns">
                                 <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="campaigns-requests.html">Requests</a>
-                                    </li><!--end nav-item-->
                                     <li class="nav-item">
                                         <a class="nav-link" href="create-bulk-campaign.html">Create Bulk Campaign</a>
                                     </li><!--end nav-item-->
@@ -222,74 +225,68 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title my-3">Campaign 1</h4>
-                                <div class="file-box-content">
-                                    <div class="file-box">
-                                        <a href="#" class="download-icon-link">
-                                            <i class="las la-download file-download-icon"></i>
-                                        </a>
-                                        <div class="text-center">
-                                            <i class="lar la-file-alt text-primary"></i>
-                                            <h6 class="text-truncate">Admin_Panel</h6>
-                                            <small class="text-muted">06 March 2021 / 5MB</small>
-                                        </div>
-                                    </div>
-                                    <div class="file-box">
-                                        <a href="#" class="download-icon-link">
-                                            <i class="las la-download file-download-icon"></i>
-                                        </a>
-                                        <div class="text-center">
-                                            <i class="lar la-file-code text-info"></i>
-                                            <h6 class="text-truncate">Ecommerce.pdf</h6>
-                                            <small class="text-muted">15 March 2021 / 8MB</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title my-3">Campaign 2</h4>
-                                <div class="file-box-content">
-                                    <div class="file-box">
-                                        <a href="#" class="download-icon-link">
-                                            <i class="las la-download file-download-icon"></i>
-                                        </a>
-                                        <div class="text-center">
-                                            <i class="lar la-file-alt text-primary"></i>
-                                            <h6 class="text-truncate">Admin_Panel</h6>
-                                            <small class="text-muted">06 March 2021 / 5MB</small>
-                                        </div>
-                                    </div>
-                                    <div class="file-box">
-                                        <a href="#" class="download-icon-link">
-                                            <i class="las la-download file-download-icon"></i>
-                                        </a>
-                                        <div class="text-center">
-                                            <i class="lar la-file-code text-danger"></i>
-                                            <h6 class="text-truncate">Ecommerce.pdf</h6>
-                                            <small class="text-muted">15 March 2021 / 8MB</small>
-                                        </div>
-                                    </div>
-                                    <div class="file-box">
-                                        <a href="#" class="download-icon-link">
-                                            <i class="las la-download file-download-icon"></i>
-                                        </a>
-                                        <div class="text-center">
-                                            <i class="lar la-file-code text-warning"></i>
-                                            <h6 class="text-truncate">Payment_app.zip</h6>
-                                            <small class="text-muted">15 March 2021 / 8MB</small>
-                                        </div>
-                                    </div>
-                                    <div class="file-box">
-                                        <a href="#" class="download-icon-link">
-                                            <i class="las la-download file-download-icon"></i>
-                                        </a>
-                                        <div class="text-center">
-                                            <i class="lar la-file text-secondary"></i>
-                                            <h6 class="text-truncate">App_landing_001</h6>
-                                            <small class="text-muted">06 March 2021 / 5MB</small>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered mb-0 table-centered">
+                                        <thead>
+                                            <tr>
+                                                <th>Campaign name</th>
+                                                <th>Campaign type</th>
+                                                <th>Launching date</th>
+                                                <th>Report details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Campaign 1</td>
+                                                <td>Targeted Whatsapp messages</td>
+                                                <td>2023/01/11</td>
+                                                <td>
+                                                    <a href="reports-details.html"
+                                                        class="btn btn-xs btn-light btn-round text-nowrap">
+                                                        View Report
+                                                        <i class="mdi mdi-arrow-right"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Campaign 2</td>
+                                                <td>Customized Whatsapp messages</td>
+                                                <td>2023/04/01</td>
+                                                <td>
+                                                    <a href="reports-details.html"
+                                                        class="btn btn-xs btn-light btn-round text-nowrap">
+                                                        View Report
+                                                        <i class="mdi mdi-arrow-right"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Campaign 3</td>
+                                                <td>Bulk Whatsapp messages</td>
+                                                <td>2023/02/01</td>
+                                                <td>
+                                                    <a href="reports-details.html"
+                                                        class="btn btn-xs btn-light btn-round text-nowrap">
+                                                        View Report
+                                                        <i class="mdi mdi-arrow-right"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Campaign 4</td>
+                                                <td>Extracting then sending Whatsapp messages</td>
+                                                <td>2023/06/01</td>
+                                                <td>
+                                                    <a href="reports-details.html"
+                                                        class="btn btn-xs btn-light btn-round text-nowrap">
+                                                        View Report
+                                                        <i class="mdi mdi-arrow-right"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table><!--end /table-->
+                                </div><!--end /tableresponsive-->
                             </div>
                         </div>
                     </div> <!-- end col -->

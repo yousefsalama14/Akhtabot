@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Akhtabot || Create campaign</title>
+    <title>Akhtabot || Reports</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,9 +12,6 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <link href="assets/plugins/datatables/datatable.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/datepicker/datepicker.min.css" rel="stylesheet" type="text/css" />
-<link href="assets/plugins/select/selectr.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/uppy/uppy.min.css" rel="stylesheet" type="text/css" />
 
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -56,11 +53,11 @@
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" href="#campaigns" data-bs-toggle="collapse" role="button"
-                                aria-expanded="true" aria-controls="campaigns">
+                                aria-expanded="false" aria-controls="campaigns">
                                 <i class="ti ti-speakerphone menu-icon"></i>
                                 <span>Campaigns</span>
                             </a>
-                            <div class="collapse show" id="campaigns">
+                            <div class="collapse" id="campaigns">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link" href="create-bulk-campaign.html">Create Bulk Campaign</a>
@@ -73,15 +70,15 @@
                                         <a class="nav-link" href="create-customized-campaign.html">Create Customized
                                             Campaign</a>
                                     </li><!--end nav-item-->
-                                    <li class="nav-item menuitem-active">
-                                        <a class="nav-link active" href="create-extracting-campaign.html">Create
-                                            Extracting Campaign</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="create-extracting-campaign.html">Create Extracting
+                                            Campaign</a>
                                     </li><!--end nav-item-->
                                 </ul>
                             </div>
                         </li><!--end nav-item-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="reports.html">
+                        <li class="nav-item menuitem-active">
+                            <a class="nav-link active" href="reports.html">
                                 <i class="ti ti-report menu-icon"></i>
                                 <span>Reports</span>
                             </a>
@@ -215,10 +212,10 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a>
                                     </li><!--end nav-item-->
-                                    <li class="breadcrumb-item active">Create Extracting Whatsapp messages campaign</li>
+                                    <li class="breadcrumb-item active">Reports</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Create Extracting Whatsapp messages campaign</h4>
+                            <h4 class="page-title">Reports</h4>
                         </div><!--end page-title-box-->
                     </div><!--end col-->
                 </div>
@@ -227,67 +224,110 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
+                            <div class="card-header">
+                                <div class="card-title d-flex align-items-center px-2">
+                                    Campaign 1 report
+                                    <button type="button" class="btn btn-sm btn-primary csv ms-auto">Export
+                                        CSV</button>
+                                </div>
+                            </div>
                             <div class="card-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-12 col-md-6 mb-4">
-                                            <label for="CampaignName" class="form-label">Campaign name</label>
-                                            <input type="text" class="form-control" id="CampaignName"
-                                                placeholder="Enter Campaign name">
-                                        </div>
-                                        <div class="col-12 col-md-3 mb-4">
-                                            <label for="numberInput" class="form-label">Number of messages
-                                                (Optional)</label>
-                                            <input class="form-control" type="number" placeholder="100 Message"
-                                                id="numberInput">
-                                        </div>
-                                        <div class="col-12 col-md-3 mb-4">
-                                            <label for="SendingDuration" class="form-label">Sending duration (number of
-                                                days)</label>
-                                            <input class="form-control" type="number" placeholder="10 Days"
-                                                id="SendingDuration">
-                                        </div>
-                                        <div class="col-12 mb-4">
-                                            <label for="LinkForFacebook" class="form-label">Link for Facebook group/
-                                                Page/
-                                                post</label>
-                                            <input class="form-control" type="text" id="LinkForFacebook"
-                                                placeholder="https://www.facebook.com/groups/example">
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-4">
-                                            <label for="message" class="form-label">Message</label>
-                                            <textarea class="form-control" rows="5" id="message"
-                                                placeholder="Enter your message"
-                                                style="height: calc(100% - 27px);"></textarea>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-4">
-                                            <label for="Attachment" class="form-label">Attachment (Photo or PDF or
-                                                video)</label>
-                                            <!-- <input class="form-control" type="file" id="Attachment"> -->
-                                            <div id="drag-drop-area"></div>
-                                        </div>
-                                        <div class="col-12 mb-4">
-                                            <label for="TestMessage" class="form-label">Test message
-                                                (Optional)</label>
-                                            <div class="input-group flex-nowrap">
-                                                <div class="tags-input">
-                                                    <ul id="PhoneNumberTags"></ul>
-                                                    <input type="text" id="PhoneNumberTagInput" class="form-control"
-                                                        placeholder="Add Mobile number" />
-                                                </div>
-                                                <button class="btn btn-primary" type="button"
-                                                    id="TestMessage">Send</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary">Create</button>
-                                    </div>
-                                </form>
-                            </div><!--end card-body-->
+                                <div class="table-responsive">
+                                    <table class="table" id="exportDataTable">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Ext.</th>
+                                                <th>City</th>
+                                                <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
+                                                <th>Completion</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Unity Pugh</td>
+                                                <td>9958</td>
+                                                <td>Curicó</td>
+                                                <td>2005/02/11</td>
+                                                <td>37%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Theodore Duran</td>
+                                                <td>8971</td>
+                                                <td>Dhanbad</td>
+                                                <td>1999/04/07</td>
+                                                <td>97%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kylie Bishop</td>
+                                                <td>3147</td>
+                                                <td>Norman</td>
+                                                <td>2005/09/08</td>
+                                                <td>63%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Willow Gilliam</td>
+                                                <td>3497</td>
+                                                <td>Amqui</td>
+                                                <td>2009/29/11</td>
+                                                <td>30%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Blossom Dickerson</td>
+                                                <td>5018</td>
+                                                <td>Kempten</td>
+                                                <td>2006/11/09</td>
+                                                <td>17%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Elliott Snyder</td>
+                                                <td>3925</td>
+                                                <td>Enines</td>
+                                                <td>2006/03/08</td>
+                                                <td>57%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Castor Pugh</td>
+                                                <td>9488</td>
+                                                <td>Neath</td>
+                                                <td>2014/23/12</td>
+                                                <td>93%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pearl Carlson</td>
+                                                <td>6231</td>
+                                                <td>Cobourg</td>
+                                                <td>2014/31/08</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Deirdre Bridges</td>
+                                                <td>1579</td>
+                                                <td>Eberswalde-Finow</td>
+                                                <td>2014/26/08</td>
+                                                <td>44%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Daniel Baldwin</td>
+                                                <td>6095</td>
+                                                <td>Moircy</td>
+                                                <td>2000/11/01</td>
+                                                <td>33%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pearl Carlson</td>
+                                                <td>6231</td>
+                                                <td>Cobourg</td>
+                                                <td>2014/31/08</td>
+                                                <td>100%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
 
             </div><!-- container -->
 
@@ -309,11 +349,7 @@
     <!-- end page-wrapper -->
 
     <!-- Javascript  -->
-    <!-- <script src="assets/plugins/datatables/simple-datatables.js"></script> -->
-    <!-- <script src="assets/plugins/datepicker/datepicker-full.min.js"></script> -->
-    <script src="assets/plugins/uppy/uppy.min.js"></script>
-<script src="assets/plugins/select/selectr.min.js"></script>
-
+    <script src="assets/plugins/datatables/simple-datatables.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/akh.js"></script>

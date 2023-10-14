@@ -1,19 +1,20 @@
 /***** Main *****/
-:root{
+:root {
     --app-color: #19AD9F;
     --app-hover-color: #1fa699;
     --app-focus-color: #249e92;
 }
+
 /***** End Main *****/
 /***** Form *****/
 
-.form-control:focus{
+.form-control:focus {
     border-color: #C2D0DD;
 }
 
 /***** End Form *****/
 /***** Buttons *****/
-.btn-primary{
+.btn-primary {
     background-color: var(--app-color);
     border-color: var(--app-color);
 }
@@ -27,23 +28,24 @@
     color: var(--app-color);
 }
 
-.btn-check:focus+.btn-primary, .btn-primary:focus {
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
     background-color: var(--app-focus-color);
     border-color: var(--app-focus-color);
-    -webkit-box-shadow: 0 0 0 0.1rem rgba(25,173,159,.5);
-    box-shadow: 0 0 0 0.1rem rgba(25,173,159,.5);
+    -webkit-box-shadow: 0 0 0 0.1rem rgba(25, 173, 159, .5);
+    box-shadow: 0 0 0 0.1rem rgba(25, 173, 159, .5);
 }
 
 .bg-soft-primary {
-    background-color: rgba(25,173,159,.08)!important;
-    color: var(--app-color)!important;
+    background-color: rgba(25, 173, 159, .08) !important;
+    color: var(--app-color) !important;
 }
 
 .bg-soft-primary:hover {
-    background-color: var(--app-color)!important;
+    background-color: var(--app-color) !important;
 }
 
-.btn-soft-dark:hover svg path{
+.btn-soft-dark:hover svg path {
     fill: #fff;
 }
 
@@ -58,6 +60,7 @@
 .file-box-content .file-box .download-icon-link:hover {
     color: var(--app-color);
 }
+
 /***** End Buttons *****/
 /***** Sidebar *****/
 
@@ -65,7 +68,7 @@
     line-height: 90px;
 }
 
-.left-sidebar .brand .logo .logo-lg{
+.left-sidebar .brand .logo .logo-lg {
     height: 60px;
 }
 
@@ -80,7 +83,7 @@
     height: 90px;
 }
 
-.uppy-Dashboard-files > div[role="presentation"]{
+.uppy-Dashboard-files>div[role="presentation"] {
     height: 150px !important;
 }
 
@@ -91,17 +94,19 @@
 .uppy-Dashboard-browse {
     color: var(--app-color);
 }
+
 /***** End File upload (uppy) *****/
 /***** DataTable *****/
-.dataTable-table>tbody>tr>td{
+.dataTable-table>tbody>tr>td {
     vertical-align: middle;
 }
 
-.dataTable-sorter::before, .dataTable-sorter::after {
+.dataTable-sorter::before,
+.dataTable-sorter::after {
     right: -16px;
 }
 
-.table-message{
+.table-message {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -111,4 +116,100 @@
 .dataTable-table th a {
     white-space: nowrap;
 }
+
 /***** End DataTable *****/
+/***** Phone Number Tag *****/
+.tags-input {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border: 1px solid #e8ebf3;
+    padding: 5px 28px 5px 5px;
+    border-radius: 0.25rem;
+    flex-grow: 1;
+}
+
+.tags-input:focus {
+    border-color: #C2D0DD;
+}
+
+.tags-input .form-control {
+    display: inline-block;
+    width: auto;
+    flex-grow: 1;
+    padding: .13rem 1rem;
+    border: 0;
+}
+
+.tags-input ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 0.5rem;
+    margin-bottom: 0;
+}
+
+.tags-input ul li {
+    position: relative;
+    background-color: var(--app-color);
+    display: inline-block;
+    padding: 0.25em 25px 0.25em 0.65em;
+    font-size: .9em;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.btn-remove {
+    right: 2px;
+    position: absolute !important;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+    -o-transform: translate3d(0,-50%,0);
+    -ms-transform: translate3d(0,-50%,0);
+    -moz-transform: translate3d(0,-50%,0);
+    -webkit-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+    border: none;
+    background-color: transparent;
+    z-index: 11;
+}
+
+.btn-remove::after,
+.btn-remove::before {
+    top: 4px;
+    width: 3px;
+    height: 12px;
+    background-color: #fff;
+}
+
+.btn-remove::after,
+.btn-remove::before {
+    width: 1px;
+    position: absolute;
+    content: ' ';
+    left: 9px;
+}
+
+.btn-remove::before {
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-remove::after {
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/***** End Phone Number Tag *****/
